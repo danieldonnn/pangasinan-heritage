@@ -2,7 +2,7 @@ const heritageSites = [
   {
     id: "alaminos-hundred-islands",
     name: "Alaminos Hundred Islands",
-    image: "/alaminos hundred islands1.jpg",
+    image: "/pangasinan-heritage/alaminos hundred islands1.jpg",
     description:
       "Discover the Hundred Islands located in Alaminos City, the Hundred Islands National Park is one of the Philippines’ most iconic natural wonders. With 124 islands and islets during high tide, each one offers something unique — white sand beaches, cave viewpoints, and marine sanctuaries. Perfect for families, barkada trips, and adventure seekers.",
     location: "Alaminos City Pangasinan",
@@ -10,7 +10,7 @@ const heritageSites = [
   {
     id: "cape-bolinao-lighthouse",
     name: "Cape Bolinao Lighthouse",
-    image: "/cape bolinao lighthouse.jpg",
+    image: "/pangasinan-heritage/cape bolinao lighthouse.jpg",
     description:
       "Step into the history of Bolinao at the iconic Cape Bolinao Lighthouse. Standing above the coastline of Patar, this historic landmark combines rich maritime heritage with breathtaking views of the sea and surrounding landscape. Whether you're exploring Pangasinan's history or simply looking for a scenic destination, the lighthouse offers a glimpse into the enduring story of Bolinao.",
     location: "Bolinao Pangasinan",
@@ -18,7 +18,7 @@ const heritageSites = [
   {
     id: "urbiztondo-san-juan",
     name: "Urbiztondo San Juan La Union",
-    image: "/urbiztondo san juan, la union2.jpg",
+    image: "/pangasinan-heritage/urbiztondo san juan, la union2.jpg",
     description:
       "Urbiztondo Beach is a popular coastal destination in San Juan, La Union, known for its beautiful shoreline, vibrant surf culture, and stunning sunsets. It attracts both local and international visitors looking to experience the waves, relax by the sea, and enjoy the lively atmosphere of the area. As one of the Philippines' well-known surfing destinations, Urbiztondo offers an exciting blend of adventure, nature, and local coastal culture.",
     location: "Urbiztondo Beach, San Juan, La Union",
@@ -29,7 +29,6 @@ export default function HeritageSection() {
   return (
     <section className="mx-auto mt-9 max-w-7xl px-6 pb-8">
       <div className="rounded-2xl border border-[#2F4858]/40 bg-white px-5 py-6 md:px-6 md:py-6">
-
         <div className="space-y-10">
           {heritageSites.map((site) => (
             <article
@@ -38,7 +37,6 @@ export default function HeritageSection() {
               className="scroll-mt-6 overflow-hidden rounded-lg bg-[#f3f0f0]"
             >
               <div className="grid md:grid-cols-[42%_58%]">
-
                 {/* Image */}
                 <div className="h-56 md:h-64">
                   <img
@@ -79,12 +77,10 @@ export default function HeritageSection() {
                     <span>{site.location}</span>
                   </div>
                 </div>
-
               </div>
             </article>
           ))}
         </div>
-
       </div>
     </section>
   );
