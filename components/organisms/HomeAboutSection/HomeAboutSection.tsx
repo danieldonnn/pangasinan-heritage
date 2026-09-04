@@ -2,9 +2,7 @@ export default function HomeAboutSection() {
   return (
     <section className="mx-auto mt-10 max-w-7xl px-6 pb-8">
       <div className="rounded-2xl border border-[#2F4858]/40 bg-white px-6 py-7 md:px-8 md:py-8">
-
         <div className="grid items-center gap-8 md:grid-cols-2">
-
           {/* Text */}
           <div>
             <h2 className="text-2xl font-bold text-[#2F8CBF] md:text-3xl">
@@ -27,14 +25,12 @@ export default function HomeAboutSection() {
           {/* Image */}
           <div className="h-64 overflow-hidden rounded-2xl">
             <img
-              src="/hundred-islands-2.jpg"
+              src="/pangasinan-heritage/hundred-islands-2.jpg"
               alt="Pangasinan beach"
               className="h-full w-full object-cover"
             />
           </div>
-
         </div>
-
       </div>
     </section>
   );
