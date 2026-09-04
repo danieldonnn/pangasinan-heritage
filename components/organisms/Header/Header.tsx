@@ -8,6 +8,10 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const isHome = pathname === "/" || pathname.endsWith("/");
+  const isDiscover = pathname.includes("/heritage");
+  const isAbout = pathname.includes("/about");
+
   return (
     <header className="w-full border-b border-gray-400 bg-white">
       <nav className="mx-auto flex items-center justify-between px-2 py-3 md:px-10 md:py-0">
@@ -27,10 +31,9 @@ export default function Header() {
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-11 md:-translate-y-2 md:flex">
           <Link
-            href="/pangasinan-heritage/"
+            href="/"
             className={
-              pathname === "/pangasinan-heritage/" ||
-              pathname === "/pangasinan-heritage"
+              isHome
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
                 : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
             }
@@ -39,9 +42,9 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/pangasinan-heritage/heritage"
+            href="/heritage"
             className={
-              pathname === "/pangasinan-heritage/heritage"
+              isDiscover
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
                 : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
             }
@@ -50,9 +53,9 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/pangasinan-heritage/about"
+            href="/about"
             className={
-              pathname === "/pangasinan-heritage/about"
+              isAbout
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
                 : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
             }
@@ -78,11 +81,10 @@ export default function Header() {
         <div className="border-t border-gray-200 bg-white px-4 py-3 md:hidden">
           <div className="flex flex-col gap-2">
             <Link
-              href="/pangasinan-heritage/"
+              href="/"
               onClick={() => setMenuOpen(false)}
               className={
-                pathname === "/pangasinan-heritage/" ||
-                pathname === "/pangasinan-heritage"
+                isHome
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"
                   : "rounded-full px-4 py-2 text-sm font-semibold text-gray-900"
               }
@@ -91,10 +93,10 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/pangasinan-heritage/heritage"
+              href="/heritage"
               onClick={() => setMenuOpen(false)}
               className={
-                pathname === "/pangasinan-heritage/heritage"
+                isDiscover
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"
                   : "rounded-full px-4 py-2 text-sm font-semibold text-gray-900"
               }
@@ -103,10 +105,10 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/pangasinan-heritage/about"
+              href="/about"
               onClick={() => setMenuOpen(false)}
               className={
-                pathname === "/pangasinan-heritage/about"
+                isAbout
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"
                   : "rounded-full px-4 py-2 text-sm font-semibold text-gray-900"
               }
