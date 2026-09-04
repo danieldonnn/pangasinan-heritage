@@ -8,9 +8,22 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const isHome = pathname === "/" || pathname.endsWith("/");
-  const isDiscover = pathname.includes("/heritage");
-  const isAbout = pathname.includes("/about");
+  const isHome =
+    pathname === "/" ||
+    pathname === "/pangasinan-heritage" ||
+    pathname === "/pangasinan-heritage/";
+
+  const isDiscover =
+    pathname === "/heritage" ||
+    pathname === "/heritage/" ||
+    pathname === "/pangasinan-heritage/heritage" ||
+    pathname === "/pangasinan-heritage/heritage/";
+
+  const isAbout =
+    pathname === "/about" ||
+    pathname === "/about/" ||
+    pathname === "/pangasinan-heritage/about" ||
+    pathname === "/pangasinan-heritage/about/";
 
   return (
     <header className="w-full border-b border-gray-400 bg-white">
