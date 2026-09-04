@@ -2,9 +2,9 @@ import Button from "@/components/atoms/Button/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative mx-auto mt-6 min-h-[700px] max-w-7.0xl overflow-hidden rounded-3xl">
+    <section className="relative mx-auto mt-6 min-h-[700px] max-w-7xl overflow-hidden rounded-3xl">
       <img
-        src="/hundred-islands.png"
+        src="/pangasinan-heritage/hundred-islands.png"
         alt="Hundred Islands in Alaminos, Pangasinan"
         className="absolute inset-0 h-full w-full object-cover"
       />
@@ -32,10 +32,12 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/heritage">Explore Destinations</Button>
+            <Button href="/pangasinan-heritage/heritage">
+              Explore Destinations
+            </Button>
 
             <a
-              href="/about"
+              href="/pangasinan-heritage/about"
               className="inline-flex items-center justify-center rounded-full border border-white px-5 py-2 text-sm font-semibold text-white transition hover:bg-white hover:text-[#2F4858]"
             >
               Learn More
