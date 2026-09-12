@@ -15,7 +15,7 @@ const siteDetails = {
       "/pangasinan-heritage/pangasinan-heritage1.jpg",
       "/pangasinan-heritage/pangasinan-heritage2.jpg",
       "/pangasinan-heritage/pangasinan-heritage3.jpg",
-      "/pangasinan-heritage/pangasinan-heritage4.JPG",
+      "/pangasinan-heritage/pangasinan-heritage5.jpg",
     ],
   },
 
