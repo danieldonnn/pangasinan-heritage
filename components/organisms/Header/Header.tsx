@@ -25,11 +25,20 @@ export default function Header() {
     pathname === "/pangasinan-heritage/about" ||
     pathname === "/pangasinan-heritage/about/";
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <header className="w-full border-b border-gray-400 bg-white">
-      <nav className="mx-auto flex items-center justify-between px-2 py-3 md:px-10 md:py-0">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-400 bg-white/95 shadow-sm backdrop-blur">
+      <nav className="mx-auto flex items-center justify-between px-2 py-3 md:px-10 md:py-4">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link
+          href="/"
+          onClick={closeMenu}
+          className="flex items-center"
+          aria-label="Pangasinan Provincial Tourism Home"
+        >
           <div>
             <h1 className="text-2xl font-bold leading-none text-[#2F8CBF] md:text-3xl">
               PANGASINAN
@@ -39,16 +48,16 @@ export default function Header() {
               PROVINCIAL TOURISM
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden items-center gap-11 md:-translate-y-2 md:flex">
+        <div className="hidden items-center gap-11 md:flex">
           <Link
             href="/"
             className={
               isHome
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
-                : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
+                : "px-3 py-2 text-base font-semibold text-gray-900 transition hover:text-[#2F8CBF]"
             }
           >
             Home
@@ -59,7 +68,7 @@ export default function Header() {
             className={
               isDiscover
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
-                : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
+                : "px-3 py-2 text-base font-semibold text-gray-900 transition hover:text-[#2F8CBF]"
             }
           >
             Discover
@@ -70,7 +79,7 @@ export default function Header() {
             className={
               isAbout
                 ? "rounded-full bg-[#2F8CBF] px-3 py-2 text-base font-semibold text-white"
-                : "px-3 py-2 text-base font-semibold text-gray-900 hover:text-[#2F8CBF]"
+                : "px-3 py-2 text-base font-semibold text-gray-900 transition hover:text-[#2F8CBF]"
             }
           >
             About
@@ -80,9 +89,11 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((open) => !open)}
           className="rounded-full bg-[#2F4858] px-3 py-2 text-xl text-white md:hidden"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
         >
           {menuOpen ? "×" : "☰"}
@@ -95,7 +106,7 @@ export default function Header() {
           <div className="flex flex-col gap-2">
             <Link
               href="/"
-              onClick={() => setMenuOpen(false)}
+              onClick={closeMenu}
               className={
                 isHome
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"
@@ -107,7 +118,7 @@ export default function Header() {
 
             <Link
               href="/heritage"
-              onClick={() => setMenuOpen(false)}
+              onClick={closeMenu}
               className={
                 isDiscover
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"
@@ -119,7 +130,7 @@ export default function Header() {
 
             <Link
               href="/about"
-              onClick={() => setMenuOpen(false)}
+              onClick={closeMenu}
               className={
                 isAbout
                   ? "rounded-full bg-[#2F8CBF] px-4 py-2 text-sm font-semibold text-white"

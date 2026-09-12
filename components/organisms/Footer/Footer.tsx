@@ -1,56 +1,73 @@
 export default function Footer() {
   return (
-    <footer className="mt-1 rounded-3xl bg-[#f3f0f0] px-10 py-8 md:px-12 md:py-5">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
-
-        {/* Logo */}
+    <footer className="mt-1 rounded-3xl bg-[#f3f0f0] px-5 py-6 md:px-12 md:py-7">
+      <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3 md:items-start">
+        {/* Branding */}
         <div>
-          <h2 className="text-3xl font-bold leading-none text-[#1681c4]">
+          <h2 className="text-2xl font-bold leading-none text-[#1681c4] md:text-3xl">
             PANGASINAN
           </h2>
 
-          <p className="md:text-1xl font-bold tracking-wide text-[#1681c4]">
+          <p className="mt-1 text-sm font-bold tracking-wide text-[#1681c4] md:text-xl">
             TOURISM
+          </p>
+
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-gray-700">
+            Discover the beauty, culture, heritage, and unforgettable
+            destinations of Pangasinan.
           </p>
         </div>
 
-        {/* Social Media */}
+        {/* Quick Links */}
         <div>
-          <p className="mb-1 text-[18px] font-bold uppercase tracking-wide text-[#1681c4]">
+          <p className="mb-3 text-sm font-bold uppercase tracking-wide text-[#1681c4]">
+            QUICK LINKS
+          </p>
+
+          <div className="flex flex-col gap-2 text-sm text-gray-700">
+            <a
+              href="/pangasinan-heritage"
+              className="transition hover:text-[#1681c4]"
+            >
+              Home
+            </a>
+
+            <a
+              href="/pangasinan-heritage/heritage"
+              className="transition hover:text-[#1681c4]"
+            >
+              Discover
+            </a>
+
+            <a
+              href="/pangasinan-heritage/about"
+              className="transition hover:text-[#1681c4]"
+            >
+              About Us
+            </a>
+          </div>
+        </div>
+
+        {/* Connect With Us */}
+        <div>
+          <p className="mb-3 text-sm font-bold uppercase tracking-wide text-[#1681c4]">
             CONNECT WITH US
           </p>
 
-          <div className="flex items-center gap-5">
-
+          <div className="flex items-center gap-4">
             {/* Facebook */}
             <a
               href="#"
               aria-label="Facebook"
-              className="text-[#1877F2] transition hover:scale-110"
+              className="text-[#1877F2] transition hover:opacity-70"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="h-7 w-7"
+                className="h-6 w-6"
               >
-                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.016 10.125 11.925v-8.432H7.078v-3.493h3.047V9.41c0-3.017 1.792-4.685 4.533-4.685 1.312 0 2.686.236 2.686.236v2.973h-1.514c-1.491 0-1.956.929-1.956 1.883v2.256h3.328l-.532 3.493h-2.796v8.432C19.612 23.089 24 18.092 24 12.073z" />
-              </svg>
-            </a>
-
-            {/* X / Twitter */}
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="text-black transition hover:scale-110"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-7 w-7"
-              >
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817-5.964 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1V10H8v3h2.4v8h3.1Z" />
               </svg>
             </a>
 
@@ -58,24 +75,25 @@ export default function Footer() {
             <a
               href="#"
               aria-label="Instagram"
-              className="transition hover:scale-110"
+              className="transition hover:opacity-70"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                className="h-7 w-7"
+                className="h-6 w-6"
               >
                 <defs>
                   <linearGradient
-                    id="instagramGradient"
-                    x1="0%"
-                    y1="100%"
-                    x2="100%"
-                    y2="0%"
+                    id="instagramGradientFooter"
+                    x1="3"
+                    y1="21"
+                    x2="21"
+                    y2="3"
+                    gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0%" stopColor="#FFD600" />
-                    <stop offset="35%" stopColor="#FF7A00" />
-                    <stop offset="65%" stopColor="#FF0069" />
+                    <stop offset="0%" stopColor="#FCAF45" />
+                    <stop offset="35%" stopColor="#FF0069" />
+                    <stop offset="70%" stopColor="#D300C5" />
                     <stop offset="100%" stopColor="#7638FA" />
                   </linearGradient>
                 </defs>
@@ -87,8 +105,8 @@ export default function Footer() {
                   height="18"
                   rx="5"
                   fill="none"
-                  stroke="url(#instagramGradient)"
-                  strokeWidth="2"
+                  stroke="url(#instagramGradientFooter)"
+                  strokeWidth="1.8"
                 />
 
                 <circle
@@ -96,22 +114,41 @@ export default function Footer() {
                   cy="12"
                   r="4"
                   fill="none"
-                  stroke="url(#instagramGradient)"
-                  strokeWidth="2"
+                  stroke="url(#instagramGradientFooter)"
+                  strokeWidth="1.8"
                 />
 
                 <circle
                   cx="17.5"
                   cy="6.5"
                   r="1.2"
-                  fill="url(#instagramGradient)"
+                  fill="#D300C5"
                 />
               </svg>
             </a>
 
+            {/* Twitter / X — unchanged */}
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="text-[#111827] transition hover:opacity-70"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-6 w-6"
+              >
+                <path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.8 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L8.26 4H6.4l11.4 15.9Z" />
+              </svg>
+            </a>
           </div>
         </div>
+      </div>
 
+      {/* Copyright */}
+      <div className="mx-auto mt-7 max-w-6xl border-t border-[#2F4858]/20 pt-4 text-center text-xs text-gray-600">
+        © 2026 Pangasinan Tourism. All rights reserved.
       </div>
     </footer>
   );

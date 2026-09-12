@@ -3,7 +3,7 @@ export default function HeritageHero() {
     <section className="relative mx-auto mt-6 w-full overflow-hidden rounded-3xl">
       <div className="relative h-[700px]">
         <img
-          src="/pangasinan-heritage/pangasinan_hundred_islands4.png"
+          src="/pangasinan-heritage/discover-background-B.webp"
           alt="Hundred Islands, Pangasinan"
           className="absolute inset-0 h-full w-full object-cover"
         />

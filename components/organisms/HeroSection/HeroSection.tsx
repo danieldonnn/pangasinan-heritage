@@ -2,16 +2,23 @@ import Button from "@/components/atoms/Button/Button";
 
 export default function HeroSection() {
   return (
-    <section className="relative mx-auto mt-6 min-h-[700px] max-w-7xl overflow-hidden rounded-3xl">
+    <section className="relative mx-auto mt-6 min-h-[700px] w-full overflow-hidden rounded-3xl">
       <img
-        src="/pangasinan-heritage/hundred-islands.png"
+        src="/pangasinan-heritage/hundred-islands-A.webp"
         alt="Hundred Islands in Alaminos, Pangasinan"
+        width="1600"
+        height="900"
+        fetchPriority="high"
+        decoding="async"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-[#2F4858]/50" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[#2F4858]/50"
+      />
 
-      <div className="relative z-10 flex min-h-[600px] max-w-7xl items-center px-8 py-16 md:px-16 lg:px-20">
+      <div className="relative z-10 flex min-h-[700px] w-full items-center px-8 py-16 md:px-16 lg:px-20">
         <div className="max-w-2xl text-white">
           <h1 className="text-5xl font-bold leading-[1.05] md:text-6xl lg:text-7xl">
             Welcome to
@@ -32,9 +39,7 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button href="/pangasinan-heritage/heritage">
-              Explore Destinations
-            </Button>
+            <Button href="/heritage">Explore Destinations</Button>
 
             <a
               href="/pangasinan-heritage/about"

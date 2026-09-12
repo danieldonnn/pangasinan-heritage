@@ -193,7 +193,7 @@ export default function AboutSection() {
           {/* Image */}
           <div className="h-32 md:h-auto">
             <img
-              src="/be Part of our journey.png"
+              src="/pangasinan-heritage/be-part-of-our-journeyD.webp"
               alt="Pangasinan beach"
               className="h-full w-full object-cover"
             />

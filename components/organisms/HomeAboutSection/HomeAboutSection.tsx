@@ -1,7 +1,7 @@
 export default function HomeAboutSection() {
   return (
-    <section className="mx-auto mt-10 max-w-7xl px-6 pb-8">
-      <div className="rounded-2xl border border-[#2F4858]/40 bg-white px-6 py-7 md:px-8 md:py-8">
+    <section className="w-full px-2 pb-2 pt-2 md:px-2 md:pb-7 md:pt-10">
+      <div className="mx-auto max-w-7xl rounded-2xl border border-[#2F4858]/40 bg-white px-2 py-2 md:px-6 md:py-6">
         <div className="grid items-center gap-8 md:grid-cols-2">
           {/* Text */}
           <div>

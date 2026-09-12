@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const heritageSites = [
   {
     id: "alaminos-hundred-islands",
@@ -13,15 +15,15 @@ const heritageSites = [
     image: "/pangasinan-heritage/cape bolinao lighthouse.jpg",
     description:
       "Step into the history of Bolinao at the iconic Cape Bolinao Lighthouse. Standing above the coastline of Patar, this historic landmark combines rich maritime heritage with breathtaking views of the sea and surrounding landscape. Whether you're exploring Pangasinan's history or simply looking for a scenic destination, the lighthouse offers a glimpse into the enduring story of Bolinao.",
-    location: "Bolinao Pangasinan",
+    location: "Bolinao Pangasinan, Luzon, Philippines",
   },
   {
-    id: "urbiztondo-san-juan",
-    name: "Urbiztondo San Juan La Union",
-    image: "/pangasinan-heritage/urbiztondo san juan, la union2.jpg",
+    id: "Tondol-White-Sand-Beach",
+    name: "Tondol White Sand Beach",
+    image: "/pangasinan-heritage/tondol-white-sand0.jpg",
     description:
-      "Urbiztondo Beach is a popular coastal destination in San Juan, La Union, known for its beautiful shoreline, vibrant surf culture, and stunning sunsets. It attracts both local and international visitors looking to experience the waves, relax by the sea, and enjoy the lively atmosphere of the area. As one of the Philippines' well-known surfing destinations, Urbiztondo offers an exciting blend of adventure, nature, and local coastal culture.",
-    location: "Urbiztondo Beach, San Juan, La Union",
+      "Located in Brgy. Tondol, Anda, Pangasinan, Tondol White Sand Beach is a hidden gem in Northern Luzon. Known for its kilometers-long stretch of powdery white sand and shallow, crystal-clear waters, it offers a serene and uncrowded beach experience. Unlike other commercialized beaches, Tondol retains its natural charm — perfect for swimming, beach camping, and sunset viewing. It's ideal for families, barkadas, and couples looking for a peaceful getaway. Anda is also known as the gateway to the Hundred Islands, making Tondol Beach a must-visit destination when exploring Pangasinan.",
+    location: "Anda, Pangasinan, Luzon, Philippines",
   },
 ];
 
@@ -76,6 +78,14 @@ export default function HeritageSection() {
 
                     <span>{site.location}</span>
                   </div>
+
+                  {/* View all images */}
+                  <Link
+                    href={`/heritage/${site.id}`}
+                    className="mt-3 inline-flex w-fit rounded-full bg-[#1681c4] px-4 py-1 text-sm font-semibold text-white transition hover:bg-[#126b9f]"
+                  >
+                    View all images
+                  </Link>
                 </div>
               </div>
             </article>
